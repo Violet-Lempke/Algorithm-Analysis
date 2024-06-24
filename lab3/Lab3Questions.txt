@@ -1,0 +1,13 @@
+Question 1
+	The biggest reason in some cases we do the counter before the fact is to avoid missing an incrementation. Notice how if the incrementation was placed after the check it would be inside the loop, meaning if the loop condition was never met a comparison would be done without the counter ever being incremented. Putting the incrementation first allows us to avoid this issue. 
+	
+	
+	Question 2
+		
+		(1,2,3) Comparisons = 2 and Movements = 4
+		(1,3,2) Comparisons = 3 and Movements = 5
+		(3,2,1) Comparisons = 5 and Movements = 7
+		
+		These numbers check out with the best and worst case Comparisons and Movements as defined in the second Lectures notes. With (1,2,3) perfectly matching what is expected from the best case and (3,2,1) perfectly matching what is expected from the worst case. This indicates that we can use these cases where exact result is known (such as worst and base case movements and comparisons) to ensure that the counters we have placed are in their correct places. This connects with problem one because if the incrementation at line 9 was placed after the comparison then the algorithm would potentially "perform better" (indicate a number of comparisons smaller than the expected value) than the expected number for both the best and worst case. 
+		
+Aside: this is exactly what I did for the practical analysis to ensure my counters were placed correctly. 
